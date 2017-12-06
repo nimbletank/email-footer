@@ -1,7 +1,5 @@
 <h1 align="center">
   Nimbletank's Email Siganture Generator
-  
-  Built using [Nimbletank's Next.js Boilerplate](https://github.com/nimbletank/nimbletank-nextjs-start)
 
   [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
   [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-yellow.svg?style=flat-square)](https://standardjs.com)
@@ -11,6 +9,7 @@
 </h1>
 
 Maintained by [ZakZubair](https://github.com/ZakZubair)
+Built using [Nimbletank's Next.js Boilerplate](https://github.com/nimbletank/nimbletank-nextjs-start)
 
 ## Features
 * Server-side React rendering with [Next.js](https://github.com/zeit/next.js/) v3x
