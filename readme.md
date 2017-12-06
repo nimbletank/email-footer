@@ -1,5 +1,7 @@
 <h1 align="center">
-  Nimbletank's Next.js Boilerplate
+  Nimbletank's Email Siganture Generator
+  
+  Built using [Nimbletank's Next.js Boilerplate](https://github.com/nimbletank/nimbletank-nextjs-start)
 
   [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
   [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-yellow.svg?style=flat-square)](https://standardjs.com)
@@ -8,7 +10,7 @@
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 </h1>
 
-Maintained by [Zander Martineau](https://github.com/mrmartineau)
+Maintained by [ZakZubair](https://github.com/ZakZubair)
 
 ## Features
 * Server-side React rendering with [Next.js](https://github.com/zeit/next.js/) v3x
@@ -37,7 +39,7 @@ Use [nextein](https://github.com/elmasse/nextein)
 ### Want to use Preact instead of React?
 Read [this](https://github.com/zeit/next.js/tree/master/examples/using-preact)
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/nimbletank/nimbletank-nextjs-start)
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/nimbletank/email-footer)
 
 ### Versioning
 For transparency into our release cycle and in striving to maintain backward compatibility, this repo is maintained under [the Semantic Versioning guidelines](http://semver.org/).
