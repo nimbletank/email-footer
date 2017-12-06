@@ -29,19 +29,8 @@
 * `npm run storybook:run` / `yarn storybook:run` to run storybook locally
 * `npm run storybook:build` / `yarn storybook:build` to compile storybook for static deployment
 
-### Understanding next.js
-Find out more about next.js [here](https://learnnextjs.com)
-
-### Need a static site?
-Use [nextein](https://github.com/elmasse/nextein)
-
-### Want to use Preact instead of React?
-Read [this](https://github.com/zeit/next.js/tree/master/examples/using-preact)
-
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/nimbletank/email-footer)
-
-### Versioning
-For transparency into our release cycle and in striving to maintain backward compatibility, this repo is maintained under [the Semantic Versioning guidelines](http://semver.org/).
+### Demo 
+To try the demo please click [here](https://nt-email-signature.now.sh/)
 
 ## Licence
 
