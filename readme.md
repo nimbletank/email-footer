@@ -8,8 +8,8 @@
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 </h1>
 
-Maintained by [ZakZubair](https://github.com/ZakZubair)
-Built using [Nimbletank's Next.js Boilerplate](https://github.com/nimbletank/nimbletank-nextjs-start)
+* Maintained by [ZakZubair](https://github.com/ZakZubair)
+* Built using [Nimbletank's Next.js Boilerplate](https://github.com/nimbletank/nimbletank-nextjs-start)
 
 ## Features
 * Server-side React rendering with [Next.js](https://github.com/zeit/next.js/) v3x
