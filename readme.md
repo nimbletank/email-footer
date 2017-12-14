@@ -1,5 +1,5 @@
 <h1 align="center">
-  Nimbletank's Email Siganture Generator
+  Nimbletank's Email Signature Generator
 
   [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
   [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-yellow.svg?style=flat-square)](https://standardjs.com)
@@ -29,7 +29,7 @@
 * `npm run storybook:run` / `yarn storybook:run` to run storybook locally
 * `npm run storybook:build` / `yarn storybook:build` to compile storybook for static deployment
 
-### Demo 
+### Demo
 To try the demo please click [here](https://nt-email-signature.now.sh/)
 
 ## Licence

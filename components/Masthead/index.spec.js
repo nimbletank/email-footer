@@ -16,7 +16,7 @@ const links = [
 ]
 
 test('Masthead snapshot test', () => {
-  const component = shallow(<Masthead title='Zander' links={links} />)
+  const component = shallow(<Masthead title='Zander' links={links} />).toJSON()
   expect(component).toMatchSnapshot()
 })
 
