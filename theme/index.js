@@ -58,7 +58,9 @@ export const myDesignSystem = {
     },
   },
 
-  colorPalette,
+  colors: {
+    colorPalette,
+  },
 
   breakpoints: {
     s: 300,
