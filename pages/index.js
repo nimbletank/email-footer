@@ -10,31 +10,31 @@ const SiteContainer = styled('div')`
   text-align: left;
   max-width: 100%;
   margin: 0 auto;
- 
- .html-viewer {
+
+  .html-viewer {
     background-color: #fff;
     padding: 20px;
- }
- 
- .html-code {
+  }
+
+  .html-code {
     max-height: 500px;
     overflow-y: auto;
- }
- 
- pre {
+  }
+
+  pre {
     margin: 0;
- }
- 
- .message-copied {
+  }
+
+  .message-copied {
     font-size: 12px;
     color: #f39c12;
- }
- 
- input {
+  }
+
+  input {
     color: #333;
- }
- 
- button {
+  }
+
+  button {
     position: relative;
     vertical-align: top;
     width: 100%;
@@ -50,108 +50,111 @@ const SiteContainer = styled('div')`
     cursor: pointer;
     -webkit-box-shadow: inset 0 -2px #e8930c;
     box-shadow: inset 0 -2px #e8930c;
- }
- 
- button:active {
+  }
+
+  button:active {
     top: 1px;
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
- }
- 
- .hljs {
+  }
+
+  .hljs {
     display: block;
     overflow-x: auto;
     padding: 20px;
     background: #2b2b2b;
     color: #bababa;
- }
-    
- .hljs-strong,
- .hljs-emphasis {
-     color: #a8a8a2;
- }
-    
- .hljs-bullet,
- .hljs-quote,
- .hljs-link,
- .hljs-number,
- .hljs-regexp,
- .hljs-literal {
+  }
+
+  .hljs-strong,
+  .hljs-emphasis {
+    color: #a8a8a2;
+  }
+
+  .hljs-bullet,
+  .hljs-quote,
+  .hljs-link,
+  .hljs-number,
+  .hljs-regexp,
+  .hljs-literal {
     color: #6896ba;
- }
-    
- .hljs-code,
- .hljs-selector-class {
+  }
+
+  .hljs-code,
+  .hljs-selector-class {
     color: #a6e22e;
- }
-    
- .hljs-emphasis {
+  }
+
+  .hljs-emphasis {
     font-style: italic;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-section,
+  .hljs-attribute,
+  .hljs-name,
+  .hljs-variable {
+    color: #cb7832;
+  }
+
+  .hljs-params {
+    color: #b9b9b9;
+  }
+
+  .hljs-string {
+    color: #6a8759;
+  }
+
+  .hljs-subst,
+  .hljs-type,
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-symbol,
+  .hljs-selector-id,
+  .hljs-selector-attr,
+  .hljs-selector-pseudo,
+  .hljs-template-tag,
+  .hljs-template-variable,
+  .hljs-addition {
+
+    color: #e0c46c;
+  }
+
+  .hljs-comment,
+  .hljs-deletion,
+  .hljs-meta {
+    color: #7f7f7f;
+  }
+
+  .container {
+    display: box;
+
+    @media (min-width: 620px) {
+      display: flex;
+      overflow: hidden;
+    }
  }
-    
- .hljs-keyword,
- .hljs-selector-tag,
- .hljs-section,
- .hljs-attribute,
- .hljs-name,
- .hljs-variable {
-     color: #cb7832;
- }
-    
- .hljs-params {
-     color: #b9b9b9;
- }
-    
- .hljs-string {
-     color: #6a8759;
- }
-    
- .hljs-subst,
- .hljs-type,
- .hljs-built_in,
- .hljs-builtin-name,
- .hljs-symbol,
- .hljs-selector-id,
- .hljs-selector-attr,
- .hljs-selector-pseudo,
- .hljs-template-tag,
- .hljs-template-variable,
- .hljs-addition {
-     color: #e0c46c;
- }
-    
- .hljs-comment,
- .hljs-deletion,
- .hljs-meta {
-     color: #7f7f7f;
- }
- 
- .container {		
-    display: -webkit-flex;		
-    display: -ms-flexbox;		
-    display: flex;
-    overflow: hidden;
- }
- 
- .container .col {
-    flex: 1;
-    width: 50%;
- }
- 
- .container .col:nth-child(1) { 
+
+  .container .col {
+    display: table-footer-group;
+
+    @media (min-width: 620px) {
+      flex: 1;
+      width: 50%;
+    }
+  }
+
+  .container .col:nth-child(1) {
     background: #2b2b2b;
-    -webkit-order: 1; 
-    -ms-flex-order: 1; 
     order: 1;
- }
- 
- .container .col:nth-child(2) { 
+  }
+
+  .container .col:nth-child(2) {
     background: #ffffff;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
     order: 0;
- }
+  }
 `
 
 class Index extends Component {
@@ -200,6 +203,19 @@ class Index extends Component {
             {value: 'tech', colorCode: '1aa5c8', color: 'blue'}
         ]
 
+    }
+
+    componentDidMount () {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('/static/service-worker.js')
+          .then(registration => {
+            console.log('service worker registration successful')
+          })
+          .catch(err => {
+            console.warn('service worker registration failed', err.message)
+          })
+      }
     }
 
     onSelectDepartment(val) {
@@ -260,20 +276,20 @@ class Index extends Component {
                         <font face="Helvetica, Arial, sans-serif" size="2" color="${theme[0].colorCode}" style="font-size:13px">${this.state.titleValue}</font>
 
                             <div style="margin-top: 15px;"></div>
-                            
+
                             <a href="https://www.nimbletank.com" target="_blank"><img src="https://www.nimbletank.com/static/email-signatures/images/nt-logo-${theme[0].color}.png" width="68" height="68" alt="Nimbletank" border="0" style="display:block" />
 
                             <div style="margin-top: 15px;"></div>
-                            
+
                         </a>
 
                         <font face="Helvetica, Arial, sans-serif" size="2" color="${theme[0].colorCode}" style="font-size:13px"><strong>t.</strong></font> <font face="Helvetica, Arial, sans-serif" size="2" color="53585f" style="font-size:13px">0203 8286440</font> &nbsp;
                         <font face="Helvetica, Arial, sans-serif" size="2" color="${theme[0].colorCode}" style="font-size:13px"><strong>m.</strong></font> <font face="Helvetica, Arial, sans-serif" size="2" color="53585f" style="font-size:13px">${this.state.mobileValue}<br></font>
                         <div style="margin-top: 15px; margin-bottom: 15px;">
                             <img src="https://www.nimbletank.com/static/email-signatures/images/div-${theme[0].color}.png">
-                        </div>                                                                     
+                        </div>
 
-                        
+
                         <font face="Helvetica, Arial, sans-serif" size="2" color="53585f" style="font-size:13px"><b>Nimbletank</b></strong></font><font face="Helvetica, Arial, sans-serif" size="2" color="53585f" style="font-size:13px"> Sweeps Building, 6-7 St Cross St, London, EC1N 8UA<br></font>
                         <a href="https://www.nimbletank.com" target="_blank" style="font-size:13px;color:#${theme[0].colorCode};font-family: Helvetica, Arial, sans-serif;text-decoration:none;"><b>www.nimbletank.com</b></a>
                     </td>
@@ -324,20 +340,20 @@ class Index extends Component {
                         <font face="Helvetica, Arial, sans-serif" size="2" color="${theme[0].colorCode}" style="font-size:13px">${this.state.titleValue}</font>
 
                             <div style="margin-top: 15px;"></div>
-                            
+
                             <a href="https://www.nimbletank.com" target="_blank"><img src="https://www.nimbletank.com/static/email-signatures/images/nt-logo-${theme[0].color}.png" width="68" height="68" alt="Nimbletank" border="0" style="display:block" />
 
                             <div style="margin-top: 15px;"></div>
-                            
+
                         </a>
 
                         <font face="Helvetica, Arial, sans-serif" size="2" color="${theme[0].colorCode}" style="font-size:13px"><strong>t.</strong></font> <font face="Helvetica, Arial, sans-serif" size="2" color="53585f" style="font-size:13px">0203 8286440</font> &nbsp;
-                  
+
                         <div style="margin-top: 15px; margin-bottom: 15px;">
                             <img src="https://www.nimbletank.com/static/email-signatures/images/div-${theme[0].color}.png">
-                        </div>                                                                     
+                        </div>
 
-                        
+
                         <font face="Helvetica, Arial, sans-serif" size="2" color="53585f" style="font-size:13px"><b>Nimbletank</b></strong></font><font face="Helvetica, Arial, sans-serif" size="2" color="53585f" style="font-size:13px"> Sweeps Building, 6-7 St Cross St, London, EC1N 8UA<br></font>
                         <a href="https://www.nimbletank.com" target="_blank" style="font-size:13px;color:#${theme[0].colorCode};font-family: Helvetica, Arial, sans-serif;text-decoration:none;"><b>www.nimbletank.com</b></a>
                     </td>
@@ -390,29 +406,32 @@ class Index extends Component {
                              options={this.departmentList} onChange={this.onSelectDepartment} type='select'/>
 
                     <div className="container">
-                        <div className="col">
+                        {/*<div className="col">
                             <div className='html-code'>
                                 <Highlight languages={['html']}>{emailTemplate}</Highlight>
                             </div>
-                        </div>
+                        </div>*/}
 
                         <div className="col">
                             <div className='html-viewer' dangerouslySetInnerHTML={{__html: emailTemplate}} />
                         </div>
+
+                        {/**
+                         * Build version
+                         */}
                     </div>
 
-                    <div className='button-container'>
+                    {/*<div className='button-container'>
                         <CopyToClipboard text={emailTemplate} onCopy={this.onCopy}>
                             <button>{this.buttonLabel}</button>
                         </CopyToClipboard>
 
                         {this.state.copied ? <span className='message-copied'>{this.htmlCopiedLabel}</span> : ''}
-                    </div>
+                    </div>*/}
                 </SiteContainer>
             </MasterLayout>
         )
     }
-
 }
 
 export default Index;
