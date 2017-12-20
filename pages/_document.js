@@ -21,7 +21,9 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>Nimbletank Email Signature</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
+          <link rel="manifest" href="/static/manifest.json" />
         </Head>
         <body>
           <Main />

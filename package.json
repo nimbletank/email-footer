@@ -1,7 +1,7 @@
 {
     "name": "nt-email-signature",
-    "version": "0.0.0",
-    "description": "Next.js Boilerplate for Nimbletank projects",
+    "version": "0.0.1",
+    "description": "Nimbeltank email signature generator",
     "main": "index.js",
     "scripts": {
         "dev": "next",
@@ -25,7 +25,7 @@
         "react.js",
         "next.js"
     ],
-    "author": "Zander Martineau",
+    "author": "Zak Zubair",
     "license": "MIT",
     "dependencies": {
         "design-system-utils": "^0.11.1",
@@ -49,5 +49,6 @@
         "prettier": "^1.8.0",
         "prettier-standard": "^7.0.3",
         "prop-types": "15.5.10",
+        "sw-precache-webpack-plugin": "^0.11.4"
     }
 }
