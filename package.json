@@ -1,54 +1,58 @@
 {
-    "name": "nt-email-signature",
-    "version": "0.0.1",
-    "description": "Nimbeltank email signature generator",
-    "main": "index.js",
-    "scripts": {
-        "dev": "next",
-        "build": "next build",
-        "start": "next start",
-        "format:js": "prettier-standard 'components/**/*.js' 'pages/**/*.js' 'layouts/**/*.js'",
-        "lint:js": "standard",
-        "precommit": "lint-staged"
-    },
-    "lint-staged": {
-        "linters": {
-            "(components|pages|.storybook)/**/*.js": [
-                "prettier-standard",
-                "test",
-                "git add"
-            ]
-        }
-    },
-    "keywords": [
-        "react",
-        "react.js",
-        "next.js"
-    ],
-    "author": "Zak Zubair",
-    "license": "MIT",
-    "dependencies": {
-        "design-system-utils": "^0.11.1",
-        "emotion": "^8.0.11",
-        "emotion-server": "^8.0.11",
-        "emotion-theming": "^8.0.11",
-        "next": "^4.1.4",
-        "react": "^16.0.0",
-        "react-copy-to-clipboard": "^5.0.1",
-        "react-dom": "^16.0.0",
-        "react-emotion": "^8.0.11",
-        "react-fast-highlight": "^2.2.0",
-        "react-select": "^1.0.0-rc.10",
-        "styled-system": "^1.0.8"
-    },
-    "devDependencies": {
-        "babel-plugin-emotion": "^8.0.11",
-        "eslint": "^4.10.0",
-        "husky": "^0.14.3",
-        "lint-staged": "^4.3.0",
-        "prettier": "^1.8.0",
-        "prettier-standard": "^7.0.3",
-        "prop-types": "15.5.10",
-        "sw-precache-webpack-plugin": "^0.11.4"
+  "name": "nt-email-signature",
+  "version": "0.0.1",
+  "description": "Nimbeltank email signature generator",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "format:js": "prettier-standard 'components/**/*.js' 'pages/**/*.js' 'layouts/**/*.js'",
+    "lint:js": "standard",
+    "precommit": "lint-staged",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "lint-staged": {
+    "linters": {
+      "(components|pages|.storybook)/**/*.js": [
+        "prettier-standard",
+        "test",
+        "git add"
+      ]
     }
+  },
+  "keywords": [
+    "react",
+    "react.js",
+    "next.js"
+  ],
+  "author": "Zak Zubair",
+  "license": "MIT",
+  "dependencies": {
+    "design-system-utils": "^0.11.1",
+    "emotion": "^8.0.11",
+    "emotion-server": "^8.0.11",
+    "emotion-theming": "^8.0.11",
+    "next": "^4.1.4",
+    "react": "^16.0.0",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-dom": "^16.0.0",
+    "react-emotion": "^8.0.11",
+    "react-fast-highlight": "^2.2.0",
+    "react-select": "^1.0.0-rc.10",
+    "styled-system": "^1.0.8",
+    "snyk": "^1.83.0"
+  },
+  "devDependencies": {
+    "babel-plugin-emotion": "^8.0.11",
+    "eslint": "^4.10.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.8.0",
+    "prettier-standard": "^7.0.3",
+    "prop-types": "15.5.10",
+    "sw-precache-webpack-plugin": "^0.11.4"
+  },
+  "snyk": true
 }
