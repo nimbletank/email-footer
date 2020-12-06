@@ -123,6 +123,11 @@
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.6.0.tgz#383f456b26bc96c7889f0332079f4358b16c58dc"
 
+"@types/highlight.js@^9.12.3":
+  version "9.12.4"
+  resolved "https://registry.yarnpkg.com/@types/highlight.js/-/highlight.js-9.12.4.tgz#8c3496bd1b50cc04aeefd691140aa571d4dbfa34"
+  integrity sha512-t2szdkwmg2JJyuCM20e8kR2X59WCE5Zkl4bzm1u1Oukjm79zpbiAv+QjnwLnuuV0WHEcX2NgUItu0pAMKuOPww==
+
 JSONStream@^1.0.4:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-1.3.2.tgz#c102371b6ec3a7cf3b847ca00c20bb0fce4c6dea"
@@ -2770,10 +2775,6 @@ hawk@~6.0.2:
     hoek "4.x.x"
     sntp "2.x.x"
 
-highlight.js@^9.0.0:
-  version "9.12.0"
-  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
-
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -4649,12 +4650,13 @@ react-emotion@^8.0.11:
     babel-plugin-emotion "^8.0.12"
     emotion-utils "^8.0.12"
 
-react-fast-highlight@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-fast-highlight/-/react-fast-highlight-2.2.0.tgz#afdbdfab9f3b8bd573b3e2d22b568d92cb93b42a"
+react-fast-highlight@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/react-fast-highlight/-/react-fast-highlight-4.0.0.tgz#697196a7ca77f2f950f35b329a1ff31fc1617b4b"
+  integrity sha512-bb/WfRj2ZHd2aiZMOLTzAamysxFRfLrlsq5SxYEuCQEOlyEe/LF2Vr1quPRPXEv3jsOCEH+KVu0/Q8g/Vkc8lg==
   dependencies:
+    "@types/highlight.js" "^9.12.3"
     classnames "^2.2.3"
-    highlight.js "^9.0.0"
     prop-types "^15.5.6"
 
 react-hot-loader@3.1.1:

@@ -37,7 +37,7 @@
         "react-copy-to-clipboard": "^5.0.1",
         "react-dom": "^16.0.0",
         "react-emotion": "^8.0.11",
-        "react-fast-highlight": "^2.2.0",
+        "react-fast-highlight": "^4.0.0",
         "react-select": "^1.0.0-rc.10",
         "styled-system": "^1.0.8"
     },
